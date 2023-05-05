@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY WORK</title>
+    <style>
+         body{
+        background-color: gray;
+        
+    }
+        
+    
+    #navbar{
+        background-color: black;
+        display: flex;
+
+    }
+    ul li{
+        list-style-type: none;
+        display: inline-block;
+        padding: 5px;
+        color: white;
+        
+    }
+    ul li a{
+        text-decoration: none;
+        color: white;
+    }
+    form {
+	width: 350px;
+	margin: 0 auto;
+}
+
+label {
+	display: block;
+	margin-top: 10px;
+}
+
+input[type="text"]{
+	width: 100%;
+	padding: 10px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	
+	border-radius: 5px;
+} 
+
+    </style>
+</head>    
+
+<body>
+    <div class="container">
+        
+        <div id="navbar">
+            <ul>
+                <li><a href="index.html">Index</a></li>
+                <li><a href="CV.html">CV</a></li>
+                <li><a href="Contact_us_page.html">Contact Us</a></li>
+            </ul> 
+               
+        </div>
+        
+            <form id="login">
+                <h1>LOGIN FORM</h1>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" >
+                <label for="password">Password::</label>
+                <input type="text" id="password" name="password">
+                <button type="Login">Login</button>
+            </form>    
+        
+        
+        
+  
+</body>
+
+<div id="contents"></div>
+<script>
+    let contactinf = document.querySelector('#login');
+    contactinf.addEventListener('click',function(event){
+    event.preventDefault();
+    let nam = document.querySelector('#username').value;
+    let pass = document.querySelector('#password').value;
+
+
+  if (nam ===  "salma" && pass === "12345") {
+
+    let infos = JSON.parse(localStorage.getItem("infos"))||[];
+    let contactinfo = "";
+    for(let a = 0;a < infos.length;a++) {
+		contactinfo += "<h1>" + (a+1) + "</h1>";
+		contactinfo += "<p>Name:" + infos[a].name + "</p>";
+		contactinfo +="<p>Address: "+ infos[a].address + "</p>";
+		contactinfo += "<p>Email:" + infos[a].email + "</p>";
+		contactinfo += "<p>Comments:" + infos[a].comments + "</p>";
+	 };
+	
+	 document.getElementById("contents").innerHTML=contactinfo;
+}
+else {
+ alert("invalid username or password");
+};
+
+
+
+});
+</script>
+</html>

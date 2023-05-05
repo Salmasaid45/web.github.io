@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MY WORK</title>
+   
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            list-style: none;
+            font-family: sans-serif;
+
+        }
+        body{
+            background-color: #94D9EA;
+        }
+       
+        .main-content{
+            min-height: 100vh;
+            width: 80%;
+            margin: 2rem auto;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            text-align: left;
+        }
+        .left-section{
+            grid-column: span 2;
+            height: 100%;
+            background-color: #00324A;
+        }
+        .right-section{
+            grid-column: span 2;
+            background-color: #ccc;
+            width: 220%;
+            height: 100%;
+            text-align: left;
+            float: left;
+
+        }
+        .left-content{
+            padding: 1rem 3rem;
+        }
+        .profile{
+            width: 100%;
+            border-bottom: 1px solid #f7f7f7;
+
+        }
+        .profile img{
+            width: 100%;
+            border-radius: 50%;
+            border: 8px solid black;
+            
+        }
+        .name{
+            font-size: 2rem;
+            color: white;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 1.2rem 0;
+        }
+        .career{
+            font-size: 1.2rem;
+            color: #94D9EA;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding-bottom: 1rem;
+        }
+        .main-title{
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            color: white;
+            padding-top: 3rem;
+        }
+        .contact-info ul{
+            padding-top: 2rem;
+
+        }
+        .contact-info ul li{
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            color: #718096;
+        }
+        .contact-info ul li i{
+            padding-right: 1rem;
+            font-size: 1.2rem;
+            color: #2D9CDB;
+            
+        }
+        .skills-section ul{
+            padding-top: 2rem 0;
+        }
+        .skills-section ul li{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 4rem 0;
+        }
+        .progress-bar{
+            width: 100%;
+            height: .4rem;
+            background-color: white;
+            position: relative;
+            border-radius: 12px;
+
+        }
+        .progress{
+            height: 100%;
+            position: absolute;
+            left: 0;
+            background-color: turquoise;
+            border-radius: 12px;
+
+        }
+        .js-progress{
+            width: 70%;
+        }
+        .ds-progress{
+            width: 90%;
+        }
+        .ls-skills{
+            width: 60%;
+        }
+        .ps-skills{
+            width: 30%;
+        }
+        .cs-skills{
+            width: 88%;
+        }
+        .skills-title{
+            text-transform: uppercase;
+            color: white;
+            font-size: 1rem;
+            padding-right: 3rem;
+        }
+        .reference-section{
+            color: grey;
+            font-size: 1.3rem;
+        }
+        .hobies-section{
+            color: white;
+            font-size: 1.3rem;
+        }
+        .professional-course{
+            color: gray;
+            font-size: 1.3rem;
+        }
+        .right-main-content{
+            padding: 2rem 3rem;
+
+        }
+        .right-title{
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #2F80ED;
+            text-align: left;
+            position: relative;
+            padding-bottom: 1.2rem;
+
+        }
+        .right-title::after{
+            content: "";
+            position: absolute;
+            width: 50%;
+            height: .3rem;
+            background-color: #2D9CDB;
+            border-radius: 12px;
+            right: 0;
+            top: 10%;
+            transform: translateY(-50%);
+        }
+        ul li{
+        list-style-type: none;
+        display: inline-block;
+        padding: 5px;
+        color: white;
+        
+    }
+    ul li a{
+        text-decoration: none;
+        color: white;
+    }
+    .para{
+        line-height: 1.6rem;
+        color: black;
+        font-size: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+            
+   }
+        .about{
+            padding-bottom: 1rem;
+        }
+        
+        
+        .timeline{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .tl-title{
+            letter-spacing: 1px;
+            font-size: 1.3rem;
+            color: #002333;
+            text-transform: uppercase;
+        }
+        .tl-title-2{
+            letter-spacing: 1px;
+            font-size: 1rem;
+            color: #2D9CDB;
+            text-transform: uppercase;
+            
+        }
+        .tl-content{
+            border-left: 1px solid #ccc;
+            padding-left: 2rem;
+            padding-bottom: 2rem;
+        }
+        .tl-title-2::before{
+            content: "";
+            position: absolute;
+            width: .5rem;
+            height: .5rem;
+            background-color: #2D9CDB;
+            border-radius: 50%;
+            left: 63%;
+        }
+        .image{
+            width: 40%;
+            height: 50%;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            
+        }
+        #navbar{
+        background-color: black;
+        display: flex;
+        padding-bottom: 20px;
+            
+        
+
+        
+   
+        
+        
+        
+        }
+
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <ul>
+            <li><a href="index.html">Index</a></li>
+            <li><a href="CV.html">CV</a></li>
+            <li><a href="Contact_us_page.html">Contact Us</a></li>
+        </ul> 
+           
+    </div>
+    
+    <main class="main-content">
+        <section class="left-section">
+            <div class="left-content">
+                   
+              <div class="profile">
+                <img src="Salma.jpg" alt="">
+                <h2 class="name">Salma said</h2>
+                <p class="career">Software developer</p>
+            </div>
+            
+           
+            <div class="skills-selection">
+                <h3 class="main-title">skills</h3><br>
+                <ul>
+                    <li>
+                        <p class="skills-title">Javascript</p>
+                        <div class="progress-bar">
+                            <div class="progress js-progress"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="skills-title">Drawing</p>
+                        <div class="progress-bar">
+                            <div class="progress ds-progress"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="skills-title">leadership skills</p>
+                        <div class="progress-bar">
+                            <div class="progress ls-progress"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="skills-title">programming</p>
+                        <div class="progress-bar">
+                            <div class="progress ps-progress"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="skills-title">communication</p>
+                        <div class="progress-bar">
+                            <div class="progress cs-progress"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="hobies-section">
+                <ol>
+                   <li><h3 class="main-title">hobbies & interests</h3><br></li> 
+                    <h6 class="sub-title">playing netball</h6><br>
+                    <h6 class="sub-title">watching TV</h6><br>
+                     <h6 class="sub-title">Eating snacks and drinks</h6><br>
+                     <h6 class="sub-title">walking and outing</h6><br>
+                     <h6 class="sub-title">coding</h6><br>
+                     <h6 class="sub-title">reading novels</h6><br>
+                     <h6 class="sub-title">sitting alone</h6>
+    
+                </div>
+
+                </ol>
+              
+
+
+            <div class="reference-section">
+                <h3 class="main-title">Dependents</h3><br>
+                <h6 class="sub-title">Said Rashid (father)</h6><br>
+                <h6 class="sub-title">khadija hassan (mother)</h6><br>
+                 <h6 class="sub-title">Aziz Kapopo (brother)</h6><br>
+                 <h6 class="sub-title">Cryne Joseph (sister)</h6><br>
+                 <h6 class="sub-title">shabil ali (niece)</h6>
+
+            </div>
+            <div class="professional-course">
+                <ul>
+                    <li>
+                        <h3 class="main-title">professional courses</h3><br>
+                        
+                        <li><h6 class="sub-title">Information and communication technology</h6><br>
+                        </li>
+                        <h6 class="sub-title">business and management</h6><br>
+                        <h6 class="sub-title">human resource</h6><br>
+                        <h6 class="sub-title">computer science</h6><br>
+                        <h6 class="sub-title">engeneering science</h6><br>
+                    </li>
+
+                </ul>
+            
+
+            </div>
+        </section>
+        <section class="right-section">
+            <div class="right-main-content">
+                <h2 class="right-title">personal information</h2>
+                <!-- <p class="para"> -->
+            <pre class="para">
+
+Name:   salma said Rashid
+Age:    23
+Gender:  female
+marital status:   single
+place of birth:   Ruvuma Region/Tunduru
+Date of Birth:   21/4/1999
+Country:   Tanzania
+
+             </pre>
+             <section class="experience sect">
+                 <h2 class="right-title">Working Experience</h2>
+                 <div class="timeline">
+                     <div class="left-tl-content">
+                         <h5 class="tl-title">Business</h5>
+                         <p class="para">2015-2019</p>
+                     </div>
+                     <div class="right-tl-content">
+                         <div class="tl-content">
+                             <h5 class="tl-title-2">MacMillation organization</h5>
+                             <p class="para">i have ever been enganged in small business and my first business and antrepreneurship was online business at MacMillan organization</p>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="timeline">
+                    <div class="left-tl-content">
+                        <h5 class="tl-title">Microsoft</h5>
+                        <p class="para">2020-2021</p>
+                    </div>
+                    <div class="right-tl-content">
+                        <div class="tl-content">
+                            <h5 class="tl-title-2">tunduru young group ltd</h5>
+                            <p class="para">during 2020-2021, i appointed in tunduru group ltd located at ruvuma region to be a microsoft writing and publishing such as microsoft word and excel</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline">
+                    <div class="left-tl-content">
+                        <h5 class="tl-title">Software developmnt</h5>
+                        <p class="para">2021-2022</p>
+                    </div>
+                    <div class="right-tl-content">
+                        <div class="tl-content">
+                            <h5 class="tl-title-2">state university of zanzibar</h5>
+                            <p class="para">in 2021-2022, i get practical training ( field) at the state university of zanzibar through young developer camp, there, i learnt to do software development and web developmant by creating different websites and webpages by using HTML and CSS</p>
+                        </div>
+                    </div>
+                </div>
+                <section class="Education-backgroud sect">
+                    <h2 class="right-title">Education backgroud</h2>
+                    <div class="timeline">
+                        <div class="left-tl-content">
+                            <h5 class="tl-title">sebleni primary sc.</h5>
+                            <p class="para">2007-2013</p>
+
+                       </div>  
+                       <div class="right-tl-content">
+                        <div class="tl-content">
+                            <h5 class="tl-title-2">primary student</h5>
+                            <p class="para">i completed my primary school at sebleni primary school zanzibar in 2013</p>
+                        </div>
+                    </div>
+                    </div>   
+                    <div class="timeline">
+                        <div class="left-tl-content">
+                            <h5 class="tl-title">M/ladu secondry sc.</h5>
+                            <p class="para">2014-2014</p>
+
+                       </div>  
+                       <div class="right-tl-content">
+                        <div class="tl-content">
+                            <h5 class="tl-title-2">ordinary secondary student</h5>
+                            <p class="para">i completed my ordinary secondary  school at muembe ladu secondary school zanzibar in 2017 and get my certificate</p>
+                        </div>
+                    </div>
+                    </div>  
+                    <div class="timeline">
+                        <div class="left-tl-content">
+                            <h5 class="tl-title">Jang'ombe advance school.</h5>
+                            <p class="para">2018-2021</p>
+
+                       </div>  
+                       <div class="right-tl-content">
+                        <div class="tl-content">
+                            <h5 class="tl-title-2">A-level student</h5>
+                            <p class="para">i studied my advance school at jang'ombe secondary school where i got my advance certificate</p>
+                        </div>
+                    </div>
+                    </div>  
+                    <div class="timeline">
+                        <div class="left-tl-content">
+                            <h5 class="tl-title">state university of zanzibar (SUZA)</h5>
+                            <p class="para">2021-till now</p>
+
+                       </div>  
+                       <div class="right-tl-content">
+                        <div class="tl-content">
+                            <h5 class="tl-title-2">high-level student</h5>
+                            <p class="para">i am now continuing my higher education at the state university of zanzibar until 2024.</p>
+                        </div>
+                    </div>
+                    </div>                         
+             </section>
+             <section class="project sect">
+                <h2 class="right-title">projects</h2>
+                <div class="timeline">
+                    <div class="left-tl-content">
+                        
+                        <p>in my school life, i conduct several projects which i were given at school.
+                            some of these project are:
+                        </p><br>
+                        
+                            <p>1.  Designing the homepage of google using CSS. i succeed to conduct this project . the technology used here is personal computer(PC).
+                                    in this project i stood as a designer of google using CSS and HTML. at the end i got the result below
+                                
+                            </p>
+                            <div class="image">
+                                <img src="cap2.png"><br>
+                                <p>2. Creating a webpage with a slide menu in it. the technology used was computer and my role was a developer. i submit this work at 16/4/2023the result was:</p>
+                                <img src="cap1.png">
+                            </div>
+                            
+                            
+
+                        
+                    </div>
+                
+            </div>
+
+        </section>
+
+        
+    </main>
+ </body>
+
+</html>
